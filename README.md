@@ -2,6 +2,8 @@
 
 A rust image with built-in nodejs for various purposes.
 
+> WARNING: This is not a image to serve projects with! Consider it as a builder image. use multi-stage builds as stated below.
+
 ## Features
 
 - node v18
