@@ -32,3 +32,12 @@ COPY --from=builder /usr/app/dist /usr/share/nginx/html
 ```
 
 > NOTE: The Dockerfile above wont work yet it is a fair demonstration of how it should be used.
+
+### handling CLI
+
+This image comes with bash support out-of-the box.
+Just click the `CLI` button in your docker desktop or via the command line:
+
+```bash
+ docker exec -it mycontainer sh
+```
