@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    shell: bash
+
     steps:
     - name: check out repo
       uses: actions/checkout@v3
@@ -28,6 +28,7 @@ jobs:
 
     - name: Build and push Docker images
       uses: docker/build-push-action@v4.0.0
+      shell: bash
       with:
         platforms: linux/amd64,linux/arm64
         push: true
