@@ -23,6 +23,12 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build + Push Image
-      run: docker buildx build . -t 15012002/rust-node:latest  --platform linux/amd64,linux/arm64 --push
-      
+    - name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            15012002/rust-node:latest
+            ghcr.io/15012002/rust-node:latest
