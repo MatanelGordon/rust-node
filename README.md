@@ -43,3 +43,13 @@ Just click the `CLI` button in your docker desktop or via the command line:
 ```bash
  docker exec -it mycontainer sh
 ```
+
+### Manual Build
+
+Feel free to build this image manually by cloning its [github repository](https://github.com/MatanelGordon/rust-node)
+
+To build the image, *make sure you have docker installed* and use:
+
+```bash
+docker build . -t rust-node 
+```
