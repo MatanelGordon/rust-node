@@ -9,9 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    shell: bash
     steps:
     - name: check out repo
       uses: actions/checkout@v3
+
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -25,7 +29,6 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v4.0.0
       with:
-        context: .
         platforms: linux/amd64,linux/arm64
         push: true
         tags: 15012002/rust-node:latest
