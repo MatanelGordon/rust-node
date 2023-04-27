@@ -1,5 +1,5 @@
 FROM rust
-LABEL maintainer="Matanel Gordon"
+LABEL maintainer="MatanelGordon"
 RUN apt update -y
 # install nodejs
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sh && apt install nodejs -y
