@@ -22,9 +22,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    
-    - name: Override shell usage to bash
-      run: ln -sf /bin/bash /bin/sh
 
     - name: Build + Push Image
       run: docker buildx build . -t 15012002/rust-node:latest  --platform linux/amd64,linux/arm64 --push
