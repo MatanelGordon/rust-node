@@ -17,6 +17,8 @@ A rust image with built-in nodejs for various purposes.
 - To build a rust projects involved with node momorepos
 - To build web-assembly projects
 
+ > NOTE: This image is only for building stage, Do not use this as final image in dockerfiles.
+ 
 ## Usage
 
 To diploy a node site based on rust packages
@@ -33,7 +35,7 @@ FROM nginx:latest
 COPY --from=builder /usr/app/dist /usr/share/nginx/html
 ```
 
-> NOTE: The Dockerfile above wont work yet it is a fair demonstration of how it should be used.
+> NOTE: The Dockerfile above wont work yet it sets a fair demonstration of how it should be used.
 
 ### handling CLI
 
