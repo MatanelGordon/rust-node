@@ -5,6 +5,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  pull_request_review:
+    types: [submitted]
 
 jobs:
   build:
@@ -25,6 +27,7 @@ jobs:
 
     - name: Build and push
       uses: docker/build-push-action@v4
+      if: github.event.review.state == 'approved'
       with:
         context: .
         platforms: linux/amd64,linux/arm64
