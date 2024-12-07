@@ -27,7 +27,7 @@ jobs:
 
     - name: Build and push
       uses: docker/build-push-action@v4
-      if: github.event.review.state == 'approved'
+      if: ${{ github.event_name == 'push' || github.event.review.state == 'approved' }}
       with:
         context: .
         platforms: linux/amd64,linux/arm64
