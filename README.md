@@ -55,3 +55,9 @@ To build the image, *make sure you have docker installed* and use:
 ```bash
 docker build . -t rust-node 
 ```
+
+### Uploading a new Image
+
+- Fork The repo
+- Make changes and have fun
+- PR to main
