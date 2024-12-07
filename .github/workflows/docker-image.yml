@@ -29,4 +29,6 @@ jobs:
         context: .
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: 15012002/rust-node:latest
+        tags: |
+          ${{ secrets.DOCKERHUB_USERNAME }}/rust-node:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/rust-node:${{ github.head_ref || github.ref_name }}
