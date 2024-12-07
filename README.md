@@ -6,10 +6,10 @@ A rust image with built-in nodejs for various purposes.
 
 ## Features
 
-- node v20
+- node v22
 - npm v10
 - built in yarn & pnpm
-- rust 1.76.0
+- rust 1.83.0
 - bash-sh aliasing for better CLI support for Docker Desktop
 
 ## Use Cases
@@ -18,7 +18,7 @@ A rust image with built-in nodejs for various purposes.
 - To build web-assembly projects
 
  > NOTE: This image is only for building stage, Do not use this as final image in dockerfiles.
- 
+
 ## Usage
 
 To diploy a node site based on rust packages
